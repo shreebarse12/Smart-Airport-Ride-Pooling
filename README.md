@@ -187,3 +187,10 @@ This implementation demonstrates:
 5.Clean architecture
 6.Modular and maintainable code
 
+## 🏁 Assumptions
+
+All rides originate from the airport
+Max 4 seats per cab
+Max 3 luggage capacity
+Haversine formula used for distance calculation
+No external routing APIs used
