@@ -112,53 +112,37 @@ Final Price =
 × Surge Multiplier
 × (1 - Pool Discount)
 
-
 Where:
-
 Base Fare = 100
-
 Distance Rate = 15 per km
-
 Detour Rate = 5 per km
-
 Pool Discount = 20%
 
-⚡ Performance Considerations
+## ⚡Performance Considerations
 
 Indexed queries → O(log n)
-
 Minimal full table scans
-
 Haversine calculation → O(1)
-
 Row-level locking minimizes contention
-
 Designed to support 100 req/sec
-
 Optimized for <300ms latency
 
-🌐 API Documentation
+## 🌐 API Documentation
 
 Swagger UI available at:
-
 http://127.0.0.1:8000/docs
 
-🖥 Minimal Demo UI
+## 🖥 Minimal Demo UI
 
 A simple demo interface is available at:
-
 http://127.0.0.1:8000/
 
-
 Allows:
-
 Create Ride
-
 Cancel Ride
-
 View response
 
-⚙️ Setup & Run Instructions
+## ⚙️ Setup & Run Instructions
 1️⃣ Clone Repository
 git clone <your-repo-url>
 cd smart-airport-ride-pooling
@@ -173,7 +157,6 @@ pip install -r requirements.txt
 4️⃣ Setup Environment Variables
 
 Create .env:
-
 DATABASE_URL=postgresql://postgres:yourpassword@localhost:5432/ride_pooling
 LOG_LEVEL=INFO
 
@@ -194,30 +177,13 @@ uvicorn app.main:app --reload
   "detour_tolerance_km": 10
 }
 
-📊 Evaluation Focus Alignment
+## 📊 Evaluation Focus Alignment
 
 This implementation demonstrates:
+1.Correctness of ride grouping logic
+2.Optimized database modeling
+3.Concurrency safety
+4.Performance-aware design
+5.Clean architecture
+6.Modular and maintainable code
 
-Correctness of ride grouping logic
-
-Optimized database modeling
-
-Concurrency safety
-
-Performance-aware design
-
-Clean architecture
-
-Modular and maintainable code
-
-🏁 Assumptions
-
-All rides originate from airport
-
-Max 4 seats per cab
-
-Max 3 luggage capacity
-
-Haversine formula used for distance
-
-No external routing APIs used
